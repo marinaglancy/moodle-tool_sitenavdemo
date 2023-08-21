@@ -24,7 +24,9 @@
 
 require_once(__DIR__ . '/../../../config.php');
 
-$baseurl = new moodle_url('/admin/tool/sitenavdemo/index.php');
+$view = optional_param('view', '', PARAM_TEXT);
+
+$baseurl = new moodle_url('/admin/tool/sitenavdemo/index.php', ['view' => $view]);
 $PAGE->set_url($baseurl);
 $PAGE->set_context(context_system::instance());
 
@@ -34,5 +36,5 @@ $PAGE->set_heading($SITE->fullname);
 
 echo $OUTPUT->header();
 echo $OUTPUT->heading($title);
-echo "Welcome to sitenavdemo!. This is page: ".s(optional_param('view', '', PARAM_TEXT));
+echo "Welcome to sitenavdemo!. This is page: " . s($view);
 echo $OUTPUT->footer();
