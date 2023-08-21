@@ -33,12 +33,20 @@ class hook_callbacks {
     public static function extend_primary_navigation(\core\hook\navigation\extend_primary_navigation $hook): void {
         $primarynav = $hook->get_primaryview();
 
-        $node = $primarynav->add(
+        $primarynav->add(
             'Custom item 1',
+            new \moodle_url('/admin/tool/sitenavdemo/index.php', ['view' => 'Custom item 1']),
+            \navigation_node::TYPE_ROOTNODE,
+            null,
+            'custom-1'
+        );
+
+        $node = $primarynav->add(
+            'Custom menu',
             null,
             \navigation_node::NODETYPE_BRANCH,
             null,
-            'custom-1'
+            'custom-0'
         );
 
         $node->add(
