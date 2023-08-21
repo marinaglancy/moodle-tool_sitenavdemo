@@ -26,11 +26,11 @@ namespace tool_sitenavdemo\local;
 class hook_callbacks {
 
     /**
-     * Hook implementation. TODO more details.
+     * Extends primary navigation
      *
-     * @param \core\hook\navigation\site_primarynav $hook
+     * @param \core\hook\navigation\extend_primary_navigation $hook
      */
-    public static function site_primarynav(\core\hook\navigation\site_primarynav $hook): void {
+    public static function extend_primary_navigation(\core\hook\navigation\extend_primary_navigation $hook): void {
         $primarynav = $hook->get_primaryview();
 
         $node = $primarynav->add(

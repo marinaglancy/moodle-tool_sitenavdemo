@@ -26,6 +26,6 @@ defined('MOODLE_INTERNAL') || die();
 
 $plugin->component    = 'tool_sitenavdemo';
 $plugin->release      = '1.0';
-$plugin->version      = 2023082101;
+$plugin->version      = 2023082102;
 $plugin->requires     = 2023081800.00;
 $plugin->maturity     = MATURITY_STABLE;
