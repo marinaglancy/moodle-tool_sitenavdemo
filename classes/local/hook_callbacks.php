@@ -30,7 +30,7 @@ class hook_callbacks {
      *
      * @param \core\hook\navigation\extend_primary_navigation $hook
      */
-    public static function extend_primary_navigation(\core\hook\navigation\extend_primary_navigation $hook): void {
+    public static function extend_primary_navigation(\core\hook\navigation\primary_extend $hook): void {
         $primarynav = $hook->get_primaryview();
 
         $primarynav->add(
