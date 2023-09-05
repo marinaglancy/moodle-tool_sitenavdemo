@@ -27,7 +27,7 @@ defined('MOODLE_INTERNAL') || die();
 $callbacks = [
 
     [
-        'hook' => core\hook\navigation\extend_primary_navigation::class,
+        'hook' => core\hook\navigation\primary_extend::class,
         'callback' => 'tool_sitenavdemo\local\hook_callbacks::extend_primary_navigation',
         'priority' => '0',
     ],
